@@ -1,23 +1,23 @@
 backend:
   name: git-gateway
-  branch: main # Change to master if needed
+  branch: main
 
-media_folder: "images" # Where client uploads go
+media_folder: "images"
 public_folder: "/images"
 
 collections:
   - name: "pages"
     label: "Pages"
-    folder: "."
-    extension: "md"
-    format: "frontmatter"
-    create: false # Prevents client from deleting main pages
-    fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - {
-          label: "Layout",
-          name: "layout",
-          widget: "hidden",
-          default: "layout.html",
-        }
-      - { label: "Body", name: "body", widget: "markdown" }
+    files:
+      - label: "Home Page"
+        name: "home"
+        file: "index.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Layout",
+              name: "layout",
+              widget: "hidden",
+              default: "layout.html",
+            }
+          - { label: "Body", name: "body", widget: "markdown" }
