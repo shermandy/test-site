@@ -4,11 +4,33 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Management System</title>
-    <!-- Include Netlify Identity Widget -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
-    <!-- Decap CMS -->
+    <!-- Decap CMS Application Script -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+    <!-- CUSTOM PREVIEW TEMPLATE -->
+    <script>
+      // Create a clean preview component that skips frontmatter fields
+      var PagePreview = createClass({
+        render: function () {
+          var entry = this.props.entry;
+          var title = entry.getIn(["data", "title"]);
+          // Render the markdown body to HTML inside the preview
+          var body = this.props.widgetFor("body");
+
+          return h(
+            "div",
+            { style: { padding: "20px" } },
+            h("h1", {}, title),
+            h("div", {}, body),
+          );
+        },
+      });
+
+      // Register the custom preview for the "pages" collection
+      CMS.registerPreviewTemplate("pages", PagePreview);
+    </script>
   </body>
 </html>
