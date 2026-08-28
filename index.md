@@ -1,7 +1,8 @@
 ---
 title: Home Page
-layout: layout.html
+layout: layout.njk
 ---
+
 ## Your markdown content here??
 
 This is actually kind of cool.
