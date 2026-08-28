@@ -15,12 +15,13 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - {
-              label: "Include in main menu?",
+              label: "Include in Main Menu?",
               name: "tags",
               widget: "select",
               options:
                 [{ label: "No", value: "" }, { label: "Yes", value: "nav" }],
-              multiple: true,
+              default: "",
+              multiple: false,
               required: false,
             }
           - {
@@ -43,12 +44,13 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - {
-              label: "Include in main menu?",
+              label: "Include in Main Menu?",
               name: "tags",
               widget: "select",
               options:
                 [{ label: "No", value: "" }, { label: "Yes", value: "nav" }],
-              multiple: true,
+              default: "",
+              multiple: false,
               required: false,
             }
           - {
