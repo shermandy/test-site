@@ -4,7 +4,7 @@ tags: nav
 navOrder: 1
 layout: layout.njk
 blocks:
-  - type: three_card
+  - type: three_cards
     heading: Services
     cards:
       - title: Our Services
