@@ -29,7 +29,7 @@ collections:
                 [
                   {
                     label: "Three Card Section",
-                    name: "three_card",
+                    name: "three_cards",
                     widget: "object",
                     fields:
                       [
