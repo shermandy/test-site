@@ -1,8 +1,9 @@
 ---
 title: About me
 tags:
-  - Yes
+  - nav
 navOrder: 2
 layout: layout.njk
 ---
+
 Hey-o! I'm cool?

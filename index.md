@@ -1,7 +1,7 @@
 ---
 title: Home Page
 tags:
-  - Yes
+  - nav
 navOrder: 1
 layout: layout.njk
 ---
