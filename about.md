@@ -1,6 +1,7 @@
 ---
 title: About me
-tags: null
+tags:
+  - ""
 navOrder: 2
 layout: layout.njk
 ---
