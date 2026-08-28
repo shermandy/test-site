@@ -14,6 +14,13 @@ blocks:
         content: Learn more about our history
       - title: Contact Us
         content: Email us for help.
+  - type: rich_text
+    body: |-
+      ## Your markdown content here??
+
+      This is actually kind of cool.
+
+      I am a wizard, Harry!
 ---
 
 ## Your markdown content here??
