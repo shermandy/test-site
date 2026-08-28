@@ -15,17 +15,46 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - {
+              label: "Main Menu Order",
+              name: "navOrder",
+              widget: "number",
+              default: 1,
+            }
+          - {
+              label: "Include in main menu?",
+              name: "tags",
+              widget: "select",
+              options: ["nav"],
+              multiple: true,
+              required: false,
+            }
+          - {
               label: "Layout",
               name: "layout",
               widget: "hidden",
               default: "layout.njk",
             }
           - { label: "Body", name: "body", widget: "markdown" }
+
       - label: "About Me"
         name: "about"
         file: "about.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Main Menu Order",
+              name: "navOrder",
+              widget: "number",
+              default: 2,
+            }
+          - {
+              label: "Include in main menu?",
+              name: "tags",
+              widget: "select",
+              options: ["nav"],
+              multiple: true,
+              required: false,
+            }
           - {
               label: "Layout",
               name: "layout",

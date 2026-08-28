@@ -19,7 +19,22 @@
     </script>
   </head>
   <body>
+    <header>
     <h1>Test Site</h1>
+    <nav>
+      <ul>
+        {% for item in collections.nav | sortByOrder %}
+            <li>
+              <a href="{{ item.url }}" {% if item.url == page.url %}aria-current="page"{% endif %}>
+                {{ item.data.title }}
+              </a>
+            </li>
+          {% endfor %}
+      </ul>
+    </nav>
+    </header>
+    <main>
     {{ content | safe}}
+    </main>
   </body>
 </html>
