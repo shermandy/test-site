@@ -21,3 +21,15 @@ collections:
               default: "layout.html",
             }
           - { label: "Body", name: "body", widget: "markdown" }
+      - label: "About Me"
+        name: "about"
+        file: "about.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Layout",
+              name: "layout",
+              widget: "hidden",
+              default: "layout.html",
+            }
+          - { label: "Body", name: "body", widget: "markdown" }
