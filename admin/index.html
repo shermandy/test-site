@@ -7,30 +7,22 @@
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
   </head>
   <body>
-    <!-- Decap CMS Application Script -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
 
-    <!-- CUSTOM PREVIEW TEMPLATE -->
     <script>
-      // Create a clean preview component that skips frontmatter fields
-      var PagePreview = createClass({
-        render: function () {
-          var entry = this.props.entry;
-          var title = entry.getIn(["data", "title"]);
-          // Render the markdown body to HTML inside the preview
-          var body = this.props.widgetFor("body");
+      // Register custom preview component using standard function syntax
+      CMS.registerPreviewTemplate("pages", function (props) {
+        var entry = props.entry;
+        var title = entry.getIn(["data", "title"]);
+        var body = props.widgetFor("body");
 
-          return h(
-            "div",
-            { style: { padding: "20px" } },
-            h("h1", {}, title),
-            h("div", {}, body),
-          );
-        },
+        return h(
+          "div",
+          { style: { padding: "20px" } },
+          h("h1", null, title),
+          h("div", null, body),
+        );
       });
-
-      // Register the custom preview for the "pages" collection
-      CMS.registerPreviewTemplate("pages", PagePreview);
     </script>
   </body>
 </html>
