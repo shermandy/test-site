@@ -18,7 +18,8 @@ collections:
               label: "Include in main menu?",
               name: "tags",
               widget: "select",
-              options: ["Yes"],
+              options:
+                [{ label: "No", value: "" }, { label: "Yes", value: "nav" }],
               multiple: true,
               required: false,
             }
@@ -45,7 +46,8 @@ collections:
               label: "Include in main menu?",
               name: "tags",
               widget: "select",
-              options: ["Yes"],
+              options:
+                [{ label: "No", value: "" }, { label: "Yes", value: "nav" }],
               multiple: true,
               required: false,
             }
