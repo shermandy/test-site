@@ -15,29 +15,67 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - {
-              label: "Include in Main Menu?",
-              name: "tags",
-              widget: "select",
-              options:
-                [{ label: "No", value: "" }, { label: "Yes", value: "nav" }],
-              default: "",
-              multiple: false,
-              required: false,
-            }
-          - {
-              label: "Main Menu Order",
-              name: "navOrder",
-              widget: "number",
-              default: 1,
-            }
-          - {
               label: "Layout",
               name: "layout",
               widget: "hidden",
               default: "layout.njk",
             }
-          - { label: "Body", name: "body", widget: "markdown" }
-
+          - {
+              label: "Page Sections",
+              name: "blocks",
+              widget: "list",
+              typeKey: "type",
+              types:
+                [
+                  {
+                    label: "Three Card Section",
+                    name: "three_card",
+                    widget: "object",
+                    fields:
+                      [
+                        {
+                          label: "Section Heading",
+                          name: "heading",
+                          widget: "string",
+                          required: false,
+                        },
+                        {
+                          label: "Cards",
+                          name: "cards",
+                          widget: "list",
+                          min: 3,
+                          max: 3,
+                          fields:
+                            [
+                              {
+                                label: "Card Title",
+                                name: "title",
+                                widget: "string",
+                              },
+                              {
+                                label: "Card Body",
+                                name: "content",
+                                widget: "text",
+                              },
+                              {
+                                label: "Link URL",
+                                name: "link",
+                                widget: "string",
+                                required: false,
+                              },
+                            ],
+                        },
+                      ],
+                  },
+                  {
+                    label: "Rich Text Section",
+                    name: "rich_text",
+                    widget: "object",
+                    fields:
+                      [{ label: "Content", name: "body", widget: "markdown" }],
+                  },
+                ],
+            }
       - label: "About Me"
         name: "about"
         file: "about.md"

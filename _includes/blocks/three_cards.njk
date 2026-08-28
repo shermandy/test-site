@@ -1,0 +1,17 @@
+<section class="three-cards">
+  {% if block.heading %}
+    <h2>{{ block.heading }}</h2>
+  {% endif %}
+
+  <div class="card-grid">
+    {% for card in block.cards %}
+      <div class="card">
+        <h3>{{ card.title }}</h3>
+        <p>{{ card.content }}</p>
+        {% if card.link %}
+          <a href="{{ card.link }}" class="card-btn">Learn More</a>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+</section>
