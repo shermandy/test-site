@@ -1,5 +1,6 @@
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("admin");
+  eleventyConfig.addPassthroughCopy("images");
 
   // Custom filter to sort nav items by 'navOrder' frontmatter
   eleventyConfig.addFilter("sortByOrder", function(collection) {
