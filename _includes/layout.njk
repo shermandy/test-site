@@ -41,7 +41,6 @@
           {{ content | safe }}
         </div>
       {% endif %}
-      <p>Block count: {{ blocks | length }}</p>
       <!-- Loops through dynamic Decap CMS sections if defined -->
       {% if blocks %}
         {% for block in blocks %}
