@@ -2,7 +2,7 @@
 title: Home Page
 tags: nav
 navOrder: 1
-layout: layodfasdfut.njk
+layout: layout.njk
 blocks:
   - type: three_cards
     heading: Services
