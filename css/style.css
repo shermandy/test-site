@@ -1,6 +1,7 @@
 /* Base & Global Variables */
 @import "base/variables.css";
 @import "base/reset.css";
+@import "base/global.css";
 
 /* Global Layout Components */
 @import "components/header.css";
