@@ -6,4 +6,4 @@ layout: layout.njk
 ---
 Hey-o! I'm cool?
 
-![](/images/vector-2-.png)
+![donation icon](/images/vector-2-.png "Donate!")
