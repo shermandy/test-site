@@ -9,6 +9,15 @@ module.exports = function(eleventyConfig) {
     });
   });
 
+  // Add Markdown parsing filter for frontmatter/block content
+  eleventyConfig.addFilter("markdown", function(content) {
+    if (!content) return "";
+    
+    // Uses Eleventy's built-in markdown library instance
+    const markdownIt = require("markdown-it")();
+    return markdownIt.render(content);
+  });
+
   return {
     dir: {
       input: ".",
