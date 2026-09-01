@@ -1,6 +1,20 @@
 <header>
     <h1>Faith Forward</h1>
     <nav>
+    
+    </nav>
+</header>
+
+<header>
+    <div class="header-main">
+    <a href="#"><img src="img/logo.png" alt="Faith Forward Logo" /></a>
+    <h1><a href="#">Faith Forward</a></h1>
+    <img id="menu-open" src="img/menu.svg" alt="Menu Open Button" />
+    <img id="menu-close" src="img/close-menu.svg" alt="Menu Close Button" />
+    </div>
+
+    <nav id="menu">
+    <h2>Faith Forward Links</h2>
     <ul>
         {% for item in collections.nav | sortByOrder %}
         <li>
