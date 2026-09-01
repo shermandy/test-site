@@ -9,3 +9,6 @@
 /* Modular Block Sections */
 @import "blocks/three_card.css";
 @import "blocks/rich_text.css";
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&display=swap");
