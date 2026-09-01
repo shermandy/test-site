@@ -1,0 +1,17 @@
+<footer class="site-footer">
+  <p>&copy; {{ page.date.getFullYear() }} Test Site. All rights reserved.</p>
+</footer>
+
+<!-- Netlify Identity Widget Script -->
+<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+<script>
+  if (window.netlifyIdentity) {
+    window.netlifyIdentity.on("init", (user) => {
+      if (!user) {
+        window.netlifyIdentity.on("login", () => {
+          document.location.href = "/admin/";
+        });
+      }
+    });
+  }
+</script>

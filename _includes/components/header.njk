@@ -1,0 +1,14 @@
+<header>
+    <h1>Faith Forward</h1>
+    <nav>
+    <ul>
+        {% for item in collections.nav | sortByOrder %}
+        <li>
+            <a href="{{ item.url }}" {% if item.url == page.url %}aria-current="page"{% endif %}>
+            {{ item.data.title }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    </nav>
+</header>
