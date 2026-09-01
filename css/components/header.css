@@ -66,3 +66,31 @@ header nav ul a:hover::after {
   bottom: 0;
   left: 0;
 }
+
+@media screen and (min-width: 700px) {
+  #menu-open,
+  #menu-close {
+    display: none;
+  }
+  .header-main {
+    flex-wrap: nowrap;
+  }
+  header nav {
+    display: block;
+    padding: 0.5rem;
+  }
+  header nav:first-of-type {
+    padding-bottom: 0.5rem;
+  }
+  header nav ul {
+    display: flex;
+    justify-content: space-around;
+    gap: 1rem;
+  }
+  header nav ul li:last-of-type {
+    padding-bottom: 0;
+  }
+  header h2 {
+    display: none;
+  }
+}
