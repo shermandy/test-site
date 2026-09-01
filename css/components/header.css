@@ -1,0 +1,68 @@
+.header-main {
+  background-color: #3b6143;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  background-image: url("img/header-bg.png");
+  background-size: cover;
+}
+header img:first-child {
+  width: 50px;
+  height: 50px;
+  margin: 1rem;
+}
+header h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.75rem;
+  margin-right: auto;
+}
+#menu-open,
+#menu-close {
+  cursor: pointer;
+  margin-right: 1rem;
+}
+#menu-close {
+  display: none;
+}
+header nav {
+  flex-basis: 100%;
+  background-color: #e7d4ad;
+  font-family: "Roboto Condensed", sans-serif;
+  display: none;
+  padding: 1rem;
+  text-transform: uppercase;
+}
+header nav:first-of-type {
+  padding-bottom: 0;
+}
+header nav ul {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+header nav h2 {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+  color: #2d4a33;
+  border-bottom: 1px solid #a9905f;
+}
+header nav h2:first-of-type {
+  margin-top: 0;
+}
+header nav ul a {
+  display: block;
+  padding: 0.5rem 0;
+  text-decoration: none;
+  color: #000;
+  position: relative;
+}
+header nav ul a:hover::after {
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
