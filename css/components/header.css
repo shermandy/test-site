@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   flex-wrap: wrap;
-  background-image: url("img/header-bg.png");
+  background-image: url("/assets/images/header-bg.png");
   background-size: cover;
 }
 header img:first-child {
