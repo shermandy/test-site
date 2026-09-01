@@ -41,12 +41,6 @@ header nav ul {
   list-style: none;
   padding: 0;
 }
-header nav h2 {
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  color: #2d4a33;
-  border-bottom: 1px solid #a9905f;
-}
 header nav h2:first-of-type {
   margin-top: 0;
 }
@@ -89,8 +83,5 @@ header nav ul a:hover::after {
   }
   header nav ul li:last-of-type {
     padding-bottom: 0;
-  }
-  header h2 {
-    display: none;
   }
 }
