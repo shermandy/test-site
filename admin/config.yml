@@ -8,6 +8,10 @@ public_folder: "/images"
 collections:
   - name: "pages"
     label: "Pages"
+    label_singular: "Page"
+    folder: "pages"
+    slug: "{{slug}}"
+    create: true
     files:
       - label: "Home Page"
         name: "home"
