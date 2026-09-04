@@ -59,6 +59,11 @@ collections:
                 name: "hero_banner"
                 widget: "object"
                 fields:
+                  - label: "Background Image"
+                    name: "bg_image"
+                    widget: "image"
+                    required: false
+                    choose_url: true
                   - label: "Heading Text"
                     name: "heading"
                     widget: "string"
@@ -96,13 +101,13 @@ collections:
                           - { label: "Secondary", value: "secondary" }
                         required: false
 
-              - label: "Rich Text Section"
-                name: "rich_text"
-                widget: "object"
-                fields:
-                  - label: "Content"
-                    name: "body"
-                    widget: "markdown"
+                            - label: "Rich Text Section"
+                              name: "rich_text"
+                              widget: "object"
+                              fields:
+                                - label: "Content"
+                                  name: "body"
+                                  widget: "markdown"
 
       - label: "Our Story"
         name: "about"

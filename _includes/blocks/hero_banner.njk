@@ -1,4 +1,6 @@
-<section class="hero">
+<section class="hero" {% if block.bg_image %}
+    style="background-image: url('{{ block.bg_image | url }}'); background-size: cover; background-position: center;"
+  {% endif %}>
     <div class="hero-text">
         {% if block.heading %}
             <h2>{{ block.heading }}</h2>
