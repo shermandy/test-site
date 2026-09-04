@@ -1,13 +1,13 @@
 <section class="hero">
-  {% if block.heading %}
-  <div class="hero-text">
-    <h2>{{ block.heading }}</h2>
-  </div>
-  {% endif %}
-  <p>{{ block.content }}</p>
-  <div class="hero-buttons">
-    {% for link in block.links %}
-        <a href="{{ link.url }}" class="link-btn" target="{{ link.target }}">{{ link.text }}</a> 
-    {% endfor %}
-  </div>
+    <div class="hero-text">
+        {% if block.heading %}
+            <h2>{{ block.heading }}</h2>
+        {% endif %}
+        <p>{{ block.content }}</p>
+        <div class="hero-buttons">
+            {% for link in block.links %}
+                <a href="{{ link.url }}" class="link-btn" target="{{ link.target }}">{{ link.text }}</a> 
+            {% endfor %}
+        </div>
+    </div>
 </section>
