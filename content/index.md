@@ -3,6 +3,7 @@ title: Home Page
 tags: nav
 navOrder: 1
 layout: layout.njk
+permalink: /
 blocks:
   - type: rich_text
     body: |-

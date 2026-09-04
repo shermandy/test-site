@@ -11,7 +11,7 @@ collections:
     files:
       - label: "Home Page"
         name: "home"
-        file: "index.md"
+        file: "content/index.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - {
@@ -78,7 +78,7 @@ collections:
             }
       - label: "About Me"
         name: "about"
-        file: "about.md"
+        file: "content/about.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - {

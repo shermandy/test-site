@@ -3,6 +3,7 @@ title: About me
 tags: nav
 navOrder: 2
 layout: layout.njk
+permalink: /about/
 ---
 Hey-o! I'm cool?
 
