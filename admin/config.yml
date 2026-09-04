@@ -79,6 +79,7 @@ collections:
                   },
                 ],
             }
+
       - label: "Our Story"
         name: "about"
         file: "content/story.md"
@@ -107,10 +108,12 @@ collections:
               default: "layout.njk",
             }
           - { label: "Body", name: "body", widget: "markdown" }
+
       - label: "Media"
         name: "media"
         file: "content/media.md"
-        fields:
+        # Anchor definition for standard page fields
+        fields: &standard_page_fields
           - { label: "Title", name: "title", widget: "string" }
           - {
               label: "Include in Main Menu?",
@@ -137,6 +140,108 @@ collections:
               label: "Permalink",
               name: "permalink",
               widget: "hidden",
-              default: "/media/",
+              default: "/{{fields.slug}}/",
+            }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - label: "Services"
+        name: "services"
+        file: "content/services.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Include in Main Menu?",
+              name: "tags",
+              widget: "select",
+              options: [{ label: "No", value: "" }, { label: "Yes", value: "nav" }],
+              default: "nav",
+              multiple: false,
+              required: false,
+            }
+          - {
+              label: "Main Menu Order",
+              name: "navOrder",
+              widget: "number",
+              default: 3,
+            }
+          - {
+              label: "Layout",
+              name: "layout",
+              widget: "hidden",
+              default: "layout.njk",
+            }
+          - {
+              label: "Permalink",
+              name: "permalink",
+              widget: "hidden",
+              default: "/services/",
+            }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - label: "Donate"
+        name: "donate"
+        file: "content/donate.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Include in Main Menu?",
+              name: "tags",
+              widget: "select",
+              options: [{ label: "No", value: "" }, { label: "Yes", value: "nav" }],
+              default: "nav",
+              multiple: false,
+              required: false,
+            }
+          - {
+              label: "Main Menu Order",
+              name: "navOrder",
+              widget: "number",
+              default: 4,
+            }
+          - {
+              label: "Layout",
+              name: "layout",
+              widget: "hidden",
+              default: "layout.njk",
+            }
+          - {
+              label: "Permalink",
+              name: "permalink",
+              widget: "hidden",
+              default: "/donate/",
+            }
+          - { label: "Body", name: "body", widget: "markdown" }
+
+      - label: "Volunteer"
+        name: "volunteer"
+        file: "content/volunteer.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Include in Main Menu?",
+              name: "tags",
+              widget: "select",
+              options: [{ label: "No", value: "" }, { label: "Yes", value: "nav" }],
+              default: "nav",
+              multiple: false,
+              required: false,
+            }
+          - {
+              label: "Main Menu Order",
+              name: "navOrder",
+              widget: "number",
+              default: 5,
+            }
+          - {
+              label: "Layout",
+              name: "layout",
+              widget: "hidden",
+              default: "layout.njk",
+            }
+          - {
+              label: "Permalink",
+              name: "permalink",
+              widget: "hidden",
+              default: "/volunteer/",
             }
           - { label: "Body", name: "body", widget: "markdown" }
