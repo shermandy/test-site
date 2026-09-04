@@ -16,232 +16,98 @@ collections:
         name: "home"
         file: "content/index.md"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - {
-              label: "Layout",
-              name: "layout",
-              widget: "hidden",
-              default: "layout.njk",
-            }
-          - {
-              label: "Page Sections",
-              name: "blocks",
-              widget: "list",
-              typeKey: "type",
-              types:
-                [
-                  {
-                    label: "Three Card Section",
-                    name: "three_cards",
-                    widget: "object",
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Layout"
+            name: "layout"
+            widget: "hidden"
+            default: "layout.njk"
+          - label: "Page Sections"
+            name: "blocks"
+            widget: "list"
+            typeKey: "type"
+            types:
+              - label: "Three Card Section"
+                name: "three_cards"
+                widget: "object"
+                fields:
+                  - label: "Section Heading"
+                    name: "heading"
+                    widget: "string"
+                    required: false
+                  - label: "Cards"
+                    name: "cards"
+                    widget: "list"
+                    min: 3
+                    max: 3
                     fields:
-                      [
-                        {
-                          label: "Section Heading",
-                          name: "heading",
-                          widget: "string",
-                          required: false,
-                        },
-                        {
-                          label: "Cards",
-                          name: "cards",
-                          widget: "list",
-                          min: 3,
-                          max: 3,
-                          fields:
-                            [
-                              {
-                                label: "Card Title",
-                                name: "title",
-                                widget: "string",
-                              },
-                              {
-                                label: "Card Body",
-                                name: "content",
-                                widget: "text",
-                              },
-                              {
-                                label: "Link URL",
-                                name: "link",
-                                widget: "string",
-                                required: false,
-                              },
-                            ],
-                        },
-                      ],
-                  },
-                  {
-                    label: "Rich Text Section",
-                    name: "rich_text",
-                    widget: "object",
-                    fields:
-                      [{ label: "Content", name: "body", widget: "markdown" }],
-                  },
-                ],
-            }
-
-      - label: "Our Story"
-        name: "about"
-        file: "content/story.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - {
-              label: "Include in Main Menu?",
-              name: "tags",
-              widget: "select",
-              options:
-                [{ label: "No", value: "" }, { label: "Yes", value: "nav" }],
-              default: "",
-              multiple: false,
-              required: false,
-            }
-          - {
-              label: "Main Menu Order",
-              name: "navOrder",
-              widget: "number",
-              default: 2,
-            }
-          - {
-              label: "Layout",
-              name: "layout",
-              widget: "hidden",
-              default: "layout.njk",
-            }
-          - { label: "Body", name: "body", widget: "markdown" }
+                      - label: "Card Title"
+                        name: "title"
+                        widget: "string"
+                      - label: "Card Body"
+                        name: "content"
+                        widget: "text"
+                      - label: "Link URL"
+                        name: "link"
+                        widget: "string"
+                        required: false
+              - label: "Rich Text Section"
+                name: "rich_text"
+                widget: "object"
+                fields:
+                  - label: "Content"
+                    name: "body"
+                    widget: "markdown"
 
       - label: "Media"
         name: "media"
         file: "content/media.md"
-        # Anchor definition for standard page fields
+        # Shared anchor definition for standard internal pages
         fields: &standard_page_fields
-          - { label: "Title", name: "title", widget: "string" }
-          - {
-              label: "Include in Main Menu?",
-              name: "tags",
-              widget: "select",
-              options: [{ label: "No", value: "" }, { label: "Yes", value: "nav" }],
-              default: "nav",
-              multiple: false,
-              required: false,
-            }
-          - {
-              label: "Main Menu Order",
-              name: "navOrder",
-              widget: "number",
-              default: 2,
-            }
-          - {
-              label: "Layout",
-              name: "layout",
-              widget: "hidden",
-              default: "layout.njk",
-            }
-          - {
-              label: "Permalink",
-              name: "permalink",
-              widget: "hidden",
-              default: "/{{fields.slug}}/",
-            }
-          - { label: "Body", name: "body", widget: "markdown" }
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Include in Main Menu?"
+            name: "tags"
+            widget: "select"
+            options:
+              - { label: "No", value: "" }
+              - { label: "Yes", value: "nav" }
+            default: "nav"
+            multiple: false
+            required: false
+          - label: "Main Menu Order"
+            name: "navOrder"
+            widget: "number"
+            default: 2
+          - label: "Layout"
+            name: "layout"
+            widget: "hidden"
+            default: "layout.njk"
+          - label: "Permalink"
+            name: "permalink"
+            widget: "hidden"
+            default: "/{{slug}}/"
+          - label: "Body"
+            name: "body"
+            widget: "markdown"
 
+      - label: "Our Story"
+        name: "about"
+        file: "content/story.md"
+        fields: *standard_page_fields
       - label: "Services"
         name: "services"
         file: "content/services.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - {
-              label: "Include in Main Menu?",
-              name: "tags",
-              widget: "select",
-              options: [{ label: "No", value: "" }, { label: "Yes", value: "nav" }],
-              default: "nav",
-              multiple: false,
-              required: false,
-            }
-          - {
-              label: "Main Menu Order",
-              name: "navOrder",
-              widget: "number",
-              default: 3,
-            }
-          - {
-              label: "Layout",
-              name: "layout",
-              widget: "hidden",
-              default: "layout.njk",
-            }
-          - {
-              label: "Permalink",
-              name: "permalink",
-              widget: "hidden",
-              default: "/services/",
-            }
-          - { label: "Body", name: "body", widget: "markdown" }
+        fields: *standard_page_fields
 
       - label: "Donate"
         name: "donate"
         file: "content/donate.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - {
-              label: "Include in Main Menu?",
-              name: "tags",
-              widget: "select",
-              options: [{ label: "No", value: "" }, { label: "Yes", value: "nav" }],
-              default: "nav",
-              multiple: false,
-              required: false,
-            }
-          - {
-              label: "Main Menu Order",
-              name: "navOrder",
-              widget: "number",
-              default: 4,
-            }
-          - {
-              label: "Layout",
-              name: "layout",
-              widget: "hidden",
-              default: "layout.njk",
-            }
-          - {
-              label: "Permalink",
-              name: "permalink",
-              widget: "hidden",
-              default: "/donate/",
-            }
-          - { label: "Body", name: "body", widget: "markdown" }
+        fields: *standard_page_fields
 
       - label: "Volunteer"
         name: "volunteer"
         file: "content/volunteer.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - {
-              label: "Include in Main Menu?",
-              name: "tags",
-              widget: "select",
-              options: [{ label: "No", value: "" }, { label: "Yes", value: "nav" }],
-              default: "nav",
-              multiple: false,
-              required: false,
-            }
-          - {
-              label: "Main Menu Order",
-              name: "navOrder",
-              widget: "number",
-              default: 5,
-            }
-          - {
-              label: "Layout",
-              name: "layout",
-              widget: "hidden",
-              default: "layout.njk",
-            }
-          - {
-              label: "Permalink",
-              name: "permalink",
-              widget: "hidden",
-              default: "/volunteer/",
-            }
-          - { label: "Body", name: "body", widget: "markdown" }
+        fields: *standard_page_fields
