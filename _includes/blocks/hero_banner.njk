@@ -3,15 +3,9 @@
     <h2>{{ block.heading }}</h2>
   {% endif %}
     <p>{{ block.content }}</p>
-  <div class="links-grid">
+  <div class="hero-buttons">
     {% for link in block.links %}
-      <div class="card">
-        <h3>{{ link.text }}</h3>
-        <p>{{ link.description }}</p>
-        {% if link.url %}
-          <a href="{{ link.url }}" class="link-btn" target="{{ link.target }}">Learn More</a>
-        {% endif %}
-      </div>
+        <a href="{{ link.url }}" class="link-btn" target="{{ link.target }}">{{ link.text }}</a> 
     {% endfor %}
   </div>
 </section>
