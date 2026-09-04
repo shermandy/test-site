@@ -23,5 +23,5 @@ blocks:
         text: Our Story
         target: _self
         button_color: secondary
-    bg_image: /images/hero-trees.png
+    bg_image: /images/hero-trees.jpg
 ---
