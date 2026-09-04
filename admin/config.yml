@@ -107,3 +107,36 @@ collections:
               default: "layout.njk",
             }
           - { label: "Body", name: "body", widget: "markdown" }
+      - label: "Media"
+        name: "media"
+        file: "content/media.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+              label: "Include in Main Menu?",
+              name: "tags",
+              widget: "select",
+              options: [{ label: "No", value: "" }, { label: "Yes", value: "nav" }],
+              default: "nav",
+              multiple: false,
+              required: false,
+            }
+          - {
+              label: "Main Menu Order",
+              name: "navOrder",
+              widget: "number",
+              default: 2,
+            }
+          - {
+              label: "Layout",
+              name: "layout",
+              widget: "hidden",
+              default: "layout.njk",
+            }
+          - {
+              label: "Permalink",
+              name: "permalink",
+              widget: "hidden",
+              default: "/media/",
+            }
+          - { label: "Body", name: "body", widget: "markdown" }
