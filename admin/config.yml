@@ -84,6 +84,13 @@ collections:
                           - { label: "Same Tab", value: "_self" }
                           - { label: "New Tab", value: "_blank" }
                         required: false
+                      - label: "Button Color"
+                        name: "button_color"
+                        widget: "select"
+                        options:
+                          - { label: "Primary", value: "primary" }
+                          - { label: "Secondary", value: "secondary" }
+                        required: false
 
               - label: "Rich Text Section"
                 name: "rich_text"
