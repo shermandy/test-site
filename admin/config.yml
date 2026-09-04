@@ -54,6 +54,37 @@ collections:
                         name: "link"
                         widget: "string"
                         required: false
+
+              - label: "Hero Banner"
+                name: "hero_banner"
+                widget: "object"
+                fields:
+                  - label: "Heading Text"
+                    name: "heading"
+                    widget: "string"
+                  - label: "Content"
+                    name: "content"
+                    widget: "text"
+                  - label: "Links"
+                    name: "links"
+                    widget: "list"
+                    min: 0
+                    max: 2
+                    fields:
+                      - label: "Link URL"
+                        name: "url"
+                        widget: "string"
+                      - label: "Link Text"
+                        name: "text"
+                        widget: "string"
+                      - label: "Target"
+                        name: "target"
+                        widget: "select"
+                        options:
+                          - { label: "Same Tab", value: "_self" }
+                          - { label: "New Tab", value: "_blank" }
+                        required: false
+
               - label: "Rich Text Section"
                 name: "rich_text"
                 widget: "object"
