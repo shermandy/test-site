@@ -1,9 +1,9 @@
 ---
-title: About me
+title: Our Story
 tags: nav
 navOrder: 2
 layout: layout.njk
-permalink: /about/
+permalink: /story/
 ---
 Hey-o! I'm cool?
 
