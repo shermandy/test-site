@@ -1,0 +1,25 @@
+.hero {
+  background-image: url("img/hero-trees.png");
+  background-size: cover;
+}
+.hero-text {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 2rem 1rem;
+  color: #fff;
+}
+.hero h2 {
+  color: #b8734a;
+  text-align: center;
+  font-size: 2rem;
+}
+.hero-buttons {
+  text-align: center;
+}
+
+@media screen and (min-width: 700px) {
+    .hero-text {
+    max-width: 500px;
+    margin-left: 1rem;
+    padding: 2rem;
+    }
+}
