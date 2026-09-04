@@ -3,7 +3,7 @@
         {% if block.heading %}
             <h2>{{ block.heading }}</h2>
         {% endif %}
-        <p>{{ block.content }}</p>
+        <p>{{ block.content | markdown | safe }}</p>
         <div class="hero-buttons">
             {% for link in block.links %}
                 <a href="{{ link.url }}" class="button {{ link.button_color | default('primary', true) }}" target="{{ link.target }}">{{ link.text }}</a> 

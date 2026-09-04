@@ -1,3 +1,8 @@
+const markdownIt = require("markdown-it")({
+  html: true,   // Allow HTML tags in markdown input
+  breaks: true  // Convert single line breaks ('\n') into <br> tags
+});
+
 module.exports = function(eleventyConfig) {
   eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("images");
@@ -15,9 +20,6 @@ module.exports = function(eleventyConfig) {
   // Add Markdown parsing filter for frontmatter/block content
   eleventyConfig.addFilter("markdown", function(content) {
     if (!content) return "";
-    
-    // Uses Eleventy's built-in markdown library instance
-    const markdownIt = require("markdown-it")();
     return markdownIt.render(content);
   });
 
