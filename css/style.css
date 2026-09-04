@@ -2,6 +2,7 @@
 @import "base/variables.css";
 @import "base/reset.css";
 @import "base/global.css";
+@import "base/buttons.css";
 
 /* Global Layout Components */
 @import "components/header.css";

@@ -1,0 +1,15 @@
+.button {
+  border-radius: 28px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 17px;
+  padding: 0.75rem 1rem;
+  text-decoration: none;
+  margin-right: 0.5rem;
+}
+.button.primary {
+  background-color: var(--primary-button-bg);
+  border: 1px solid var(--primary-button-border);
+  text-shadow: 0px 1px 0px var(--primary-button-text-shadow);
+  color: #ffffff;
+}
