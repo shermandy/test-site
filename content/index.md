@@ -5,21 +5,17 @@ navOrder: 1
 layout: layout.njk
 permalink: /
 blocks:
-  - type: rich_text
-    body: |-
-      ## Your markdown content here??
+  - type: hero_banner
+    heading: Caring for the Community
+    content: >-2
+       A faith based human service facility that provides people in the community with the resources, counseling, and encouragement to individuals and family who may be in need!
 
-      This is actually kind of cool.
-
-      I am a wizard, Harry!
-  - type: three_cards
-    heading: Services
-    cards:
-      - title: Our Services
-        content: We sell things. For money!
-        link: https://google.com
-      - title: ABout Us
-        content: Learn more about our history
-      - title: Contact Us
-        content: Email us for help.
+      We simply want to help. Our mission is to advocate for our community. We strive everyday to support those in need and we will never give up on you! 
+    links:
+      - url: /services
+        text: Our Services
+        target: _self
+      - url: /story
+        text: Our Story
+        target: _self
 ---
