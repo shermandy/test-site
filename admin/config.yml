@@ -64,10 +64,14 @@ collections:
                     widget: "string"
                   - label: "Content"
                     name: "content"
-                    widget: "text"
+                    widget: "markdown"
+                    modes: ["rich_text"]
+                    buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list"]
+                    editor_components: []
                   - label: "Links"
                     name: "links"
                     widget: "list"
+                    required: false
                     min: 0
                     max: 2
                     fields:
