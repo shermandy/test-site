@@ -79,9 +79,9 @@ collections:
                   },
                 ],
             }
-      - label: "About Me"
+      - label: "Our Story"
         name: "about"
-        file: "content/about.md"
+        file: "content/story.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - {
