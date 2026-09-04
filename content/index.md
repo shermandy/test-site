@@ -1,5 +1,5 @@
 ---
-title: Home Page
+title: Home
 tags: nav
 navOrder: 1
 layout: layout.njk
