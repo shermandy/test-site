@@ -15,7 +15,9 @@ blocks:
       - url: /services
         text: Our Services
         target: _self
+        button_color: primary
       - url: /story
         text: Our Story
         target: _self
+        button_color: secondary
 ---
