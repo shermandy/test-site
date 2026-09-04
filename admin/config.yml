@@ -23,7 +23,9 @@ collections:
             name: "layout"
             widget: "hidden"
             default: "layout.njk"
-          - label: "Page Sections"
+          # Define the reusable blocks list anchor
+          - &blocks_field
+            label: "Page Sections"
             name: "blocks"
             widget: "list"
             typeKey: "type"
@@ -60,11 +62,11 @@ collections:
                     name: "body"
                     widget: "markdown"
 
-      - label: "Media"
-        name: "media"
-        file: "content/media.md"
-        # Shared anchor definition for standard internal pages
-        fields: &standard_page_fields
+      - label: "Our Story"
+        name: "about"
+        file: "content/story.md"
+        # Anchor definition for modular standard internal pages
+        fields: &standard_modular_fields
           - label: "Title"
             name: "title"
             widget: "string"
@@ -89,25 +91,25 @@ collections:
             name: "permalink"
             widget: "hidden"
             default: "/{{slug}}/"
-          - label: "Body"
-            name: "body"
-            widget: "markdown"
+          # Reuse the modular section block anchor
+          - *blocks_field
 
-      - label: "Our Story"
-        name: "about"
-        file: "content/story.md"
-        fields: *standard_page_fields
+      - label: "Media"
+        name: "media"
+        file: "content/media.md"
+        fields: *standard_modular_fields
+
       - label: "Services"
         name: "services"
         file: "content/services.md"
-        fields: *standard_page_fields
+        fields: *standard_modular_fields
 
       - label: "Donate"
         name: "donate"
         file: "content/donate.md"
-        fields: *standard_page_fields
+        fields: *standard_modular_fields
 
       - label: "Volunteer"
         name: "volunteer"
         file: "content/volunteer.md"
-        fields: *standard_page_fields
+        fields: *standard_modular_fields
