@@ -13,3 +13,9 @@
   text-shadow: 0px 1px 0px var(--primary-button-text-shadow);
   color: #ffffff;
 }
+.button.secondary {
+  background-color: var(--secondary-button-bg);
+  border: 1px solid var(--secondary-button-border);
+  text-shadow: 0px 1px 0px var(--secondary-button-text-shadow);
+  color: #312a1c;
+}
