@@ -1,6 +1,9 @@
 backend:
   name: git-gateway
   branch: main
+  
+# Link to your live site displayed in the admin header
+display_url: https://yourdomain.com
 
 media_folder: "images"
 public_folder: "/images"
