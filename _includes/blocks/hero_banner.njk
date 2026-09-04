@@ -1,8 +1,10 @@
-<section class="hero-banner">
+<section class="hero">
   {% if block.heading %}
+  <div class="hero-text">
     <h2>{{ block.heading }}</h2>
+  </div>
   {% endif %}
-    <p>{{ block.content }}</p>
+  <p>{{ block.content }}</p>
   <div class="hero-buttons">
     {% for link in block.links %}
         <a href="{{ link.url }}" class="link-btn" target="{{ link.target }}">{{ link.text }}</a> 
