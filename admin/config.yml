@@ -71,7 +71,14 @@ collections:
                     name: "content"
                     widget: "markdown"
                     modes: ["rich_text"]
-                    buttons: ["bold", "italic", "link", "bulleted-list", "numbered-list"]
+                    buttons:
+                      [
+                        "bold",
+                        "italic",
+                        "link",
+                        "bulleted-list",
+                        "numbered-list",
+                      ]
                     editor_components: []
                   - label: "Links"
                     name: "links"
@@ -105,6 +112,15 @@ collections:
                 name: "rich_text"
                 widget: "object"
                 fields:
+                  - label: "Background Color"
+                    name: "bg_color"
+                    widget: "select"
+                    default: "white"
+                    options:
+                      - { label: "White", value: "white" }
+                      - { label: "Light Gray", value: "light-gray" }
+                      - { label: "Soft Blue", value: "green" }
+                      - { label: "Dark Neutral", value: "dark-neutral" }
                   - label: "Content"
                     name: "body"
                     widget: "markdown"

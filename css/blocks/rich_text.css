@@ -1,0 +1,30 @@
+/* Base Rich Text Section Styling */
+.rich-text {
+  padding: 3rem 1.5rem;
+}
+
+/* Background Color Variants */
+.rich-text.bg-white {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+.rich-text.bg-light-gray {
+  background-color: #f4f4f5;
+  color: #1a1a1a;
+}
+
+.rich-text.bg-green {
+  background-color: var(--primary-dark);
+  color: var(--secondary);
+}
+
+.rich-text.bg-dark-neutral {
+  background-color: #18181b;
+  color: #f4f4f5;
+}
+
+/* Ensure links remain readable on dark backgrounds */
+.rich-text.bg-dark-neutral a {
+  color: #38bdf8;
+}
