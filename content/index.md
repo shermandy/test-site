@@ -62,4 +62,16 @@ blocks:
         cta_text: Learn More
         cta_url: /volunteer
         card_url: /volunteer
+      - heading: Services
+        image: /images/card-2.png
+        image_alt: Volunteer Praying
+        body: |-
+          * Case work
+          * Speaking engagements
+          * Workshops
+          * Community Engagement Projects
+          * Counseling in Mental Health, Children, Family, & Addiction
+          * Community Center
+        card_url: /services
+        cta_text: View More
 ---
