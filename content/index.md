@@ -61,4 +61,5 @@ blocks:
         link_url: /volunteer
         cta_text: Volunteer
         cta_url: /volunteer
+        card_url: /volunteer
 ---
