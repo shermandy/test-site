@@ -24,4 +24,11 @@ blocks:
         target: _self
         button_color: secondary
     bg_image: /images/hero-trees.jpg
+  - type: rich_text
+    body: |-
+      ## Emergency Contact
+
+      (724) 539-7900
+
+      We are available around the clock to help you!
 ---
