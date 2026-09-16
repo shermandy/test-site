@@ -74,4 +74,11 @@ blocks:
           * Community Center
         card_url: /services
         cta_text: View More
+      - heading: Events
+        image: /images/card-3.png
+        image_alt: Event Attendees
+        body: "We have events every month for our community! Find an event that speaks
+          to you: we would love for you to join us."
+        card_url: /events
+        cta_text: View Events
 ---
