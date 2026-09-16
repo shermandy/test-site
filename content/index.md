@@ -33,4 +33,13 @@ blocks:
       We are available around the clock to help you!
     bg_color: green
     text_align: center
+  - type: multi_text_grid
+    bg_color: amber
+    text_sections:
+      - heading: Latrobe
+        body: 338 Main Street, Latrobe, PA
+      - heading: Blairsville
+        body: 338 Main Street, Latrobe, PA
+      - heading: Greensburg
+        body: 338 Main Street, Latrobe, PA
 ---
