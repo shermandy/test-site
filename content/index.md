@@ -31,4 +31,5 @@ blocks:
       (724) 539-7900
 
       We are available around the clock to help you!
+    bg_color: light-gray
 ---
