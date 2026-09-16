@@ -32,4 +32,5 @@ blocks:
 
       We are available around the clock to help you!
     bg_color: amber
+    text_align: center
 ---
