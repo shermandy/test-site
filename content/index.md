@@ -40,7 +40,5 @@ blocks:
         body: 338 Main Street, Latrobe, PA
       - heading: Blairsville
         body: 338 Main Street, Latrobe, PA
-      - heading: Greensburg
-        body: 338 Main Street, Latrobe, PA
     section_heading: Locations
 ---
