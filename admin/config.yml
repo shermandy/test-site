@@ -112,6 +112,14 @@ collections:
                 name: "rich_text"
                 widget: "object"
                 fields:
+                  - label: "Text Alignment"
+                    name: "text_align"
+                    widget: "select"
+                    default: "left"
+                    options:
+                      - { label: "Left", value: "left" }
+                      - { label: "Center", value: "center" }
+                      - { label: "Right", value: "right" }
                   - label: "Background Color"
                     name: "bg_color"
                     widget: "select"
@@ -119,11 +127,79 @@ collections:
                     options:
                       - { label: "White", value: "white" }
                       - { label: "Light Gray", value: "light-gray" }
-                      - { label: "Soft Blue", value: "green" }
-                      - { label: "Dark Neutral", value: "dark-neutral" }
+                      - { label: "Dark Green", value: "green" }
+                      - { label: "Amber", value: "amber" }
                   - label: "Content"
                     name: "body"
                     widget: "markdown"
+              - label: "Multi-Text Grid Section"
+                name: "multi_text_grid"
+                widget: "object"
+                fields:
+                  - label: "Section Heading"
+                    name: "section_heading"
+                    widget: "string"
+                    required: false
+                  - label: "Background Color"
+                    name: "bg_color"
+                    widget: "select"
+                    default: "white"
+                    options:
+                      - { label: "White", value: "white" }
+                      - { label: "Light Gray", value: "light-gray" }
+                      - { label: "Dark Green", value: "green" }
+                      - { label: "Amber", value: "amber" }
+                  - label: "Text Sections"
+                    name: "text_sections"
+                    widget: "list"
+                    required: true
+                    fields:
+                      - label: "Heading (Optional)"
+                        name: "heading"
+                        widget: "string"
+                        required: false
+                      - label: "Content"
+                        name: "body"
+                        widget: "markdown"
+              - label: "Image Card Grid Section"
+                name: "image_card_grid"
+                widget: "object"
+                fields:
+                  - label: "Section Heading"
+                    name: "section_heading"
+                    widget: "string"
+                    required: false
+                  - label: "Cards"
+                    name: "cards"
+                    widget: "list"
+                    required: true
+                    fields:
+                      - label: "Heading"
+                        name: "heading"
+                        widget: "string"
+                        required: false
+                      - label: "Card Image"
+                        name: "image"
+                        widget: "image"
+                        required: false
+                      - label: "Image Alt Text"
+                        name: "image_alt"
+                        widget: "string"
+                        required: false
+                      - label: "Content"
+                        name: "body"
+                        widget: "markdown"
+                        required: false
+                      - label: "Card Link URL"
+                        name: "card_url"
+                        widget: "string"
+                        required: false
+                        hint: "URL for the entire card (including title, image, body, and button)"
+                      - label: "CTA Button Text"
+                        name: "cta_text"
+                        widget: "string"
+                        required: false
+                        hint: "Text for the button at the bottom (e.g. Learn More)"
 
       - label: "Our Story"
         name: "about"

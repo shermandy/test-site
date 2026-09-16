@@ -1,0 +1,62 @@
+/* Container & Section Styles */
+.multi-text-grid {
+  padding: 4rem 1.5rem;
+}
+.multi-text-grid .section-title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 2.5rem;
+  font-size: 2rem;
+}
+.multi-text-grid .container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* 3-Column Layout with Auto-Centering */
+.multi-text-grid .grid-3-col {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+/* Grid Cards (Calculated for 3 per row) */
+.multi-text-grid .grid-card {
+  flex: 0 1 calc((100% - 4rem) / 3);
+  box-sizing: border-box;
+}
+
+/* Responsive adjustment for tablet/mobile */
+@media (max-width: 900px) {
+  .multi-text-grid .grid-card {
+    flex: 0 1 calc((100% - 2rem) / 2); /* 2 per row on tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .multi-text-grid .grid-card {
+    flex: 1 1 100%; /* 1 per row on mobile phones */
+  }
+}
+
+/* Background Color Variants */
+.multi-text-grid.bg-white {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
+
+.multi-text-grid.bg-light-gray {
+  background-color: #f4f4f5;
+  color: #1a1a1a;
+}
+
+.multi-text-grid.bg-green {
+  background-color: var(--primary-dark);
+  color: var(--secondary);
+}
+
+.multi-text-grid.bg-amber {
+  background-color: var(--tertiary);
+  color: black;
+}

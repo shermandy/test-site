@@ -2,7 +2,12 @@
 .rich-text {
   padding: 3rem 1.5rem;
 }
-
+.rich-text h2 {
+  margin-top: 0;
+}
+.rich-text h3 {
+  font-size: 150%;
+}
 /* Background Color Variants */
 .rich-text.bg-white {
   background-color: #ffffff;
@@ -19,12 +24,17 @@
   color: var(--secondary);
 }
 
-.rich-text.bg-dark-neutral {
-  background-color: #18181b;
-  color: #f4f4f5;
+.rich-text.bg-amber {
+  background-color: var(--tertiary);
+  color: black;
 }
 
-/* Ensure links remain readable on dark backgrounds */
-.rich-text.bg-dark-neutral a {
-  color: #38bdf8;
+.rich-text.text-center {
+  text-align: center;
+}
+.rich-text.text-left {
+  text-align: left;
+}
+.rich-text.text-right {
+  text-align: right;
 }

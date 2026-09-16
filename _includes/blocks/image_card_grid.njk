@@ -1,0 +1,36 @@
+<section class="image-card-grid">
+    {% if block.section_heading %}
+      <h2 class="section-title">{{ block.section_heading }}</h2>
+    {% endif %}
+  <div class="image-card-container">
+      {% for item in block.cards %}
+        <div class="card">
+          {% if item.card_url %}
+            <a href="{{ item.card_url }}" class="card-link-wrapper">
+          {% endif %}
+
+            {% if item.heading %}
+              <h3>{{ item.heading }}</h3>
+            {% endif %}
+
+            {% if item.image %}
+              <img src="{{ item.image }}" alt="{{ item.image_alt | default(item.heading) }}">
+            {% endif %}
+
+            {% if item.body %}
+              <div class="card-body">
+                {{ item.body | markdown | safe }}
+              </div>
+            {% endif %}
+
+            {% if item.cta_text %}
+              <span class="card-cta button primary">{{ item.cta_text }}</span>
+            {% endif %}
+
+          {% if item.card_url %}
+            </a>
+          {% endif %}
+        </div>
+      {% endfor %}
+  </div>
+</section>

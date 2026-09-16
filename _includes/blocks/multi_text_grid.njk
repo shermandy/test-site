@@ -1,0 +1,22 @@
+<section class="multi-text-grid bg-{{ block.bg_color | default('white') }}">
+  <div class="container">
+    {% if block.section_heading %}
+      <h2 class="section-title">{{ block.section_heading }}</h2>
+    {% endif %}
+
+    <div class="grid-3-col">
+      {% for item in block.text_sections %}
+        <div class="grid-card">
+          {% if item.heading %}
+            <h3>{{ item.heading }}</h3>
+          {% endif %}
+          {% if item.body %}
+            <div class="card-body">
+              {{ item.body | markdown | safe }}
+            </div>
+          {% endif %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>

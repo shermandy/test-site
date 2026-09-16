@@ -11,6 +11,8 @@
 @import "blocks/three_card.css";
 @import "blocks/rich_text.css";
 @import "blocks/hero_banner.css";
+@import "blocks/multi_text_grid.css";
+@import "blocks/image_card_grid.css";
 
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@100..900&display=swap");

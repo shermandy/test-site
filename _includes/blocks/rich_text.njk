@@ -1,4 +1,4 @@
-<section class="rich-text bg-{{ block.bg_color | default('white') }}">
+<section class="rich-text bg-{{ block.bg_color | default('white') }} text-{{ block.text_align | default('left') }}">
   <div class="container">
     {{ block.body | markdown | safe }}
   </div>
