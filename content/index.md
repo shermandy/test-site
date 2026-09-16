@@ -59,7 +59,7 @@ blocks:
         image_alt: Volunteers at work
         body: We love our volunteers! Share in our community and Faith Forward family!
         link_url: /volunteer
-        cta_text: Volunteer
+        cta_text: Learn More
         cta_url: /volunteer
         card_url: /volunteer
 ---
