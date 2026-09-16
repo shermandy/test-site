@@ -28,7 +28,7 @@ blocks:
     body: |-
       ## Emergency Contact
 
-      (724) 539-7900
+      ### (724) 539-7900
 
       We are available around the clock to help you!
     bg_color: amber
