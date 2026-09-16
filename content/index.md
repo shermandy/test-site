@@ -52,7 +52,7 @@ blocks:
           15717
     section_heading: Locations
   - type: image_card_grid
-    section_heading: Test
+    section_heading: ""
     cards:
       - heading: Volunteer
         image: /images/card-1.png
