@@ -37,8 +37,18 @@ blocks:
     bg_color: amber
     text_sections:
       - heading: Latrobe
-        body: 338 Main Street, Latrobe, PA
+        body: |-
+          338 Main Street
+
+          Latrobe, PA
+
+          15650
       - heading: Blairsville
-        body: 338 Main Street, Latrobe, PA
+        body: |-
+          338 Main Street
+
+          Latrobe, PA
+
+          15717
     section_heading: Locations
 ---
